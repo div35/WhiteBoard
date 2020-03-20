@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WhiteBoard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" class="heading">WhiteBoard</th>
+
+                <th scope="col">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-edit"></i></button>
+                        <div class="dropdown-content">
+                            <button style="color: black;"><i value="black" id="mybtn"
+                                    class="fas fa-circle"></i></button>
+                            <button style="color: blue;"><i value="blue" id="mybtn" class="fas fa-circle"></i></button>
+                            <button style="color: red;"><i value="red" id="mybtn" class="fas fa-circle"></i></button>
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="60" value="5" class="slider1" id="myRange1">
+                            </div>
+                        </div>
+                    </div>
+                </th>
+
+                <th scope="col"></i>
+                    <div class="dropdown">
+                        <button class="dropbtn"><i class="fas fa-eraser"></i></button>
+                        <div class="dropdown-content">
+                            <div class="slidecontainer">
+                                <input type="range" min="1" max="100" value="10" class="slider2" id="myRange2">
+                            </div>
+                        </div>
+                    </div>
+                </th>
+
+                <th scope="col">
+                    <div class="undo">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                </th>
+
+                <th scope="col">
+                    <div class="redo">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                </th>
+
+                <th scope="col"><i class="fas fa-sticky-note"></i></th>
+
+                <th scope="col">
+                    <div class="upload">
+                        <a href="" id="fileselector">
+                            <i class="far fa-image"></i>
+                        </a>
+                        <input type="file" name="" id="fileinput" accept="image/*">
+                    </div>
+                </th>
+
+                <th scope="col">
+                    <div class="download">
+                        <a href="">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <canvas class="board"></canvas>
+    <div id="sticky">
+        <div class="sticky_nav">
+            <button class="tab"><i style="color: rgb(129, 62, 62); font-size: 0.8rem;"
+                    class="closet fas fa-circle"></i></button>
+            <button class="tab"><i style="color: rgb(204, 204, 40); font-size: 0.8rem;"
+                    class="mint fas fa-circle"></i></button>
+        </div>
+        <textarea rows="8" cols="37" class="sticky-part" id="note" style="background-color:rgba(204, 149, 40, 0.651);">
+        </textarea>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
